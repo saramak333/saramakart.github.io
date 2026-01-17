@@ -67,8 +67,17 @@
         .hero {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 6rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            margin-bottom: 2rem;
+            border: none;
         }
 
         .hero h1 {
@@ -124,7 +133,7 @@
         .gallery-item {
             aspect-ratio: 1;
             background-color: #ddd;
-            border: 1px solid #ccc;
+            border: none;
             overflow: hidden;
             transition: transform 0.3s;
         }
@@ -143,8 +152,8 @@
             max-width: 1200px;
             margin: 4rem auto;
             padding: 3rem 2rem;
-            background-color: #fff;
-            border: 1px solid #eee;
+            background-color: transparent;
+            border: none;
         }
 
         .about h2 {
@@ -167,6 +176,75 @@
             border-top: 1px solid #eee;
         }
 
+        .newsletter {
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 3rem 2rem;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 2.2rem;
+            font-weight: 200;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .newsletter .newsletter-subtitle {
+            color: #999;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .newsletter-form input {
+            width: 100%;
+            max-width: 400px;
+            padding: 0.75rem 0;
+            border: none;
+            border-bottom: 2px solid #ddd;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            text-align: center;
+            background: transparent;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #ff6b6b;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-bottom-color: #333;
+        }
+
+        .newsletter-form button {
+            padding: 0.5rem 1.5rem;
+            background-color: transparent;
+            color: #333;
+            border: 1px solid #ddd;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #333;
+            color: #fff;
+            border-color: #333;
+        }
+
         .contact-links {
             display: flex;
             justify-content: center;
@@ -187,6 +265,57 @@
         footer p {
             color: #999;
             font-size: 0.9rem;
+        }
+
+        .newsletter {
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 3rem 2rem;
+            background-color: #fff;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        .newsletter-form button {
+            padding: 0.75rem 1.5rem;
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #000;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #fff;
+            color: #000;
         }
 
         @media (max-width: 768px) {
@@ -227,7 +356,7 @@
 
     <main>
         <section class="hero">
-            <h1>Artist & Creator</h1>
+            <img src="featured-artwork.jpg" alt="Featured artwork" class="hero-image">
             <p>Exploring visual expression through innovative art and design</p>
             <a href="#portfolio" class="cta-button">View Work</a>
         </section>
@@ -260,6 +389,15 @@
             <h2>About</h2>
             <p>Welcome to my artistic space. I create work that explores the intersection of visual art, design, and creativity. Each piece is a reflection of my passion for pushing boundaries and telling meaningful stories through visual expression.</p>
             <p>With a focus on clean aesthetics and thoughtful composition, I believe in the power of minimalist design combined with bold conceptual ideas. My work spans various mediums and styles, always grounded in authenticity and personal vision.</p>
+        </section>
+
+        <section class="newsletter">
+            <h2>Sign up to the newsletter<br>to get the latest updates</h2>
+            <p class="newsletter-subtitle">One-click subscription. Email remains private.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Send</button>
+            </form>
         </section>
     </main>
 
